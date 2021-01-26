@@ -12,7 +12,12 @@ module.exports = {
     sourceType: "module",
   },
   plugins: ["react"],
-  rules: {},
+  rules: {
+    "max-len": [2, { code: 100, tabWidth: 2, ignoreUrls: true }],
+    "require-jsdoc": "off",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+  },
   settings: {
     react: {
       version: "detect",

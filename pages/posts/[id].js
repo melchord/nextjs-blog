@@ -1,7 +1,9 @@
-import Layout from '../../components/layout'
-import { getAllPostIds, getPostData } from '../../lib/posts'
+import PropTypes from 'prop-types';
 
-export default function Post({ postData }) {
+import Layout from '../../components/layout';
+import {getAllPostIds, getPostData} from '../../lib/posts';
+
+export default function Post({postData}) {
   return (
     <Layout>
       {postData.title}
@@ -10,22 +12,30 @@ export default function Post({ postData }) {
       <br />
       {postData.date}
     </Layout>
-  )
+  );
 }
+
+Post.propTypes = {
+  postData: PropTypes.shape({
+    title: PropTypes.string,
+    id: PropTypes.string,
+    date: PropTypes.string,
+  }).isRequired,
+};
 
 export async function getStaticPaths() {
-  const paths = getAllPostIds()
+  const paths = getAllPostIds();
   return {
     paths,
-    fallback: false
-  }
+    fallback: false,
+  };
 }
 
-export async function getStaticProps({ params }) {
-  const postData = getPostData(params.id)
+export async function getStaticProps({params}) {
+  const postData = getPostData(params.id);
   return {
     props: {
-      postData
-    }
-  }
+      postData,
+    },
+  };
 }
