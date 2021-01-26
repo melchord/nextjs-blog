@@ -3,24 +3,25 @@ module.exports = {
     browser: true,
     es2021: true,
   },
-  extends: ["eslint:recommended", "plugin:react/recommended", "google"],
+  extends: ['eslint:recommended', 'plugin:react/recommended', 'google'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
     ecmaVersion: 12,
-    sourceType: "module",
+    sourceType: 'module',
   },
-  plugins: ["react"],
+  plugins: ['react'],
   rules: {
-    "max-len": [2, { code: 100, tabWidth: 2, ignoreUrls: true }],
-    "require-jsdoc": "off",
-    "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { extensions: [".js", ".jsx"] }],
+    quotes: [2, 'single', { avoidEscape: true }],
+    'max-len': [2, { code: 100, tabWidth: 2, ignoreUrls: true }],
+    'require-jsdoc': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
   },
   settings: {
     react: {
-      version: "detect",
+      version: 'detect',
     },
   },
 };
