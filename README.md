@@ -2,6 +2,10 @@
 
 This is a starter template for [Learn Next.js](https://nextjs.org/learn).
 
+## Checkout the Deployment Site
+
+This project is readily available to view at https://nextjs-blog-pi-topaz.vercel.app/
+
 ## Run the website locally
 
 ### Step 1: Clone the project
